@@ -24,7 +24,12 @@ public class MainActivity extends AppCompatActivity {
         edtKQ = findViewById(R.id.edtKQ);
         btncong = findViewById(R.id.btntong);
 
+        btncong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
