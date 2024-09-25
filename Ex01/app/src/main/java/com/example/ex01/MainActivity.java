@@ -27,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
         btncong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int a = Integer.parseInt(edtA.getText().toString()); //
 
+                int b = Integer.parseInt(edtB.getText().toString());
+
+                int c = a + b;
+                edtKQ.setText(c+"");
             }
         });
 
