@@ -1,5 +1,6 @@
 package com.example.ex04;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,7 +17,7 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 
     EditText edtdoC, edtdoF;
-    Button btncf, btnfc;
+    Button btncf, btnfc,bmi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         edtdoF = findViewById(R.id.edtF);
         btncf = findViewById(R.id.btnF);
         btnfc = findViewById(R.id.btnC);
+        bmi = findViewById(R.id.bmi);
         btncf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
 //
                 int C = Integer.parseInt(doC);
                 edtdoF.setText("" + dcf.format(C * 1.8 + 32));
+            }
+        });
+        bmi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Activity2.class);
+                startActivity(intent);
             }
         });
         btnfc.setOnClickListener(new View.OnClickListener() {
