@@ -34,7 +34,24 @@ public class MainActivity extends AppCompatActivity {
                 edt3.setText("a + b =" +(a+b));
             }
         });
+        btntru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int a = Integer.parseInt("0"+edt1.getText());
+                int b = Integer.parseInt("0"+edt2.getText());
 
+                edt3.setText("a - b =" +(a-b));
+            }
+        });
+        btnnhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int a = Integer.parseInt("0"+edt1.getText());
+                int b = Integer.parseInt("0"+edt2.getText());
+
+                edt3.setText("a * b =" +(a*b));
+            }
+        });
 
     }
 }
