@@ -52,6 +52,21 @@ public class MainActivity extends AppCompatActivity {
                 edt3.setText("a * b =" +(a*b));
             }
         });
+        btnchia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                int a = Integer.parseInt("0"+edt1.getText());
+                int b = Integer.parseInt("0"+edt2.getText());
+                if (b == 0)
+                {
+                    edt3.setText("B phai khac 0");
+                }
+                else
+                {
+                    edt3.setText("a / b =" +(a/b));
+                }
+            }
+        });
     }
 }
