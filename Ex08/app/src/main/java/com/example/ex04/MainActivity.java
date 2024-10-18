@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnCall.setOnClickListener(new View.OnClickListener() {
+        call.findViewById(R.id.btncallphone);
+        sms.findViewById(R.id.btnsendsms);
+        call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 // TODO Auto-generated method stub
@@ -34,6 +36,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        sms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+// TODO Auto-generated method stub
+//Tạo mới một đối tượng intent
+                Intent intent2 =new Intent(MainActivity.this,SendSMSActivity.class);
+//Thực thi Intent1
+                startActivity(intent2);
+            }
+        });
+
 
     }
 }
