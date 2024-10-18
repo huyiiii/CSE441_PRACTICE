@@ -1,5 +1,6 @@
 package com.example.ex04;
 import static android.provider.MediaStore.ACTION_IMAGE_CAPTURE;
+import android.Manifest;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
     ImageView myimg;
     ImageButton btncapture;
     @Override
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                             String[]{Manifest.permission.CAMERA}, 1);
                     return;
                 }
-                startActivityForResult(cameraintent,99);
+                startActivityForResult(myintent,99);
             }
         });
     }
