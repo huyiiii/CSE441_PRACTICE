@@ -14,7 +14,6 @@ public class MyService extends Service {
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
-    //Gọi hàm OnCreate để tạo đối tượng mà Service quản lý
     @Override
     public void onCreate() {
         super.onCreate();

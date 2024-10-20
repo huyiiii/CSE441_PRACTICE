@@ -25,14 +25,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent1 = new Intent(MainActivity.this,
-                        MyService.class);
+                Intent intent1 = new Intent(MainActivity.this, MyService.class);
                 startService(intent1);
                 if (flag == true)
                 {
                     flag = false;
                 }
- else
+                 else
                 {
                     flag = true;
                 }
