@@ -1,6 +1,13 @@
 package com.example.ex10;
 
-public class SMSReceiver extends BroadcastReceiver {
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.telephony.SmsMessage;
+import android.widget.Toast;
+
+public class SMSReceive extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         processReceive(context,intent);
@@ -17,7 +24,7 @@ public class SMSReceiver extends BroadcastReceiver {
             {
                 SmsMessage sms = SmsMessage.createFromPdu((byte[])smsEtra[i]);
                 body = sms.getMessageBody();
-                57
+
                 address = sms.getOriginatingAddress();
                 message +="Có 1 tin nhắn từ "+address+"\n"+body+" vừa gởi đến";
             }
